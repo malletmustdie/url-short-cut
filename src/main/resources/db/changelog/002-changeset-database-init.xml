@@ -1,0 +1,45 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet author="elias" id="init-users">
+        <sql>
+            insert into users (username, login, password, decoded_password)
+            values ('https://job4j.ru/', 'job4j', '$2a$04$z.msJIb6Iv2oLKGYEpPU4uZbTJvSAjWadJEPKl7h7U.cgILeq4LFC', 'job4j');
+            insert into users (username, login, password, decoded_password)
+            values ('https://google.com/', 'google', '$2a$04$x.RHE7w9tb2Gq2DR9PJS.OKZ4hn12mvHouKE3QiopgIltTw9AzlYi', 'google');
+            insert into users (username, login, password, decoded_password)
+            values ('https://yandex.ru/', 'yandex','$2a$04$fTCSav67sFbSjPKoVBhuhuMfCZSACKjbv9e0mB3ToK/H3DgsCHR/W', 'yandex');
+        </sql>
+    </changeSet>
+    <changeSet author="elias" id="init-links">
+        <sql>
+            insert into links (url, encoded_url, total, user_id)
+            values ('https://job4j.ru/profile/exercise/106/task-view/532',
+                    '$2a$04$XT2apsTGKgS4XivdAX/u3.seRvPakmBzTYWGJkKCbsdxa0JHOHeD.',
+                    1,
+                    1);
+        </sql>
+    </changeSet>
+    <changeSet author="elias" id="init-roles">
+        <sql>
+            insert into roles (name)
+            values ('ROLE_USER');
+            insert into roles (name)
+            values ('ROLE_ADMIN');
+        </sql>
+    </changeSet>
+    <changeSet author="elias" id="init-users-roles">
+        <sql>
+            insert into users_roles (user_id, role_id)
+            values (1, 1);
+            insert into users_roles (user_id, role_id)
+            values (1, 2);
+            insert into users_roles (user_id, role_id)
+            values (2, 1);
+            insert into users_roles (user_id, role_id)
+            values (3, 1);
+        </sql>
+    </changeSet>
+</databaseChangeLog>
