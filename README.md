@@ -17,16 +17,16 @@ using this service and paste it anywhere. Redirecting goes through service which
 
 #### Register site
 
-![alt text](https://github.com/malletmustdie/job4j_car_accident/blob/master/images/001-reg.png)
+![alt text](https://github.com/malletmustdie/url-short-cut/blob/master/images/001-reg.png)
 
 #### Getting token
 
-![alt text](https://github.com/malletmustdie/job4j_car_accident/blob/master/images/002-auth.png)
+![alt text](https://github.com/malletmustdie/url-short-cut/blob/master/images/002-auth.png)
 
 #### Convert link
 
-![alt text](https://github.com/malletmustdie/job4j_car_accident/blob/master/images/003-convert-url.png)
+![alt text](https://github.com/malletmustdie/url-short-cut/blob/master/images/003-convert-url.png)
 
 #### Getting statistic
 
-![alt text](https://github.com/malletmustdie/job4j_car_accident/blob/master/images/004-statistic.png)
+![alt text](https://github.com/malletmustdie/url-short-cut/blob/master/images/004-statistic.png)
