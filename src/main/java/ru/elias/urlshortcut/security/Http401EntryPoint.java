@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import ru.elias.urlshortcut.dto.ErrorResponseDto;
 
 @Slf4j
 @ControllerAdvice
@@ -26,14 +27,14 @@ public class Http401EntryPoint implements AuthenticationEntryPoint {
         ObjectMapper mapper = new ObjectMapper();
         response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-//        response.getOutputStream()
-//                .println(mapper.writeValueAsString(
-//                                 ErrorResponseDto.builder()
-//                                                 .status("unauthorized")
-//                                                 .msg("invalid request")
-//                                                 .build()
-//                         )
-//                );
+        response.getOutputStream()
+                .println(mapper.writeValueAsString(
+                        ErrorResponseDto.builder()
+                                        .status("unauthorized")
+                                        .msg("invalid request")
+                                        .build()
+                         )
+                );
     }
 
 }
