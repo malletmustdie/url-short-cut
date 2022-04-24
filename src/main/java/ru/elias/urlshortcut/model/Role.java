@@ -35,7 +35,7 @@ public class Role {
     @Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "roles")
     private List<User> users = new ArrayList<>();
 
 }
