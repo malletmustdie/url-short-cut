@@ -8,7 +8,7 @@ using this service and paste it anywhere. Redirecting goes through service which
 ### Used technologies
 
 * Java 11
-* Spring (Boot, Data JPA, Security & JWT authorization)
+* Spring (Boot, Data JPA, AOP, Security & JWT authorization)
 * Swagger OpenAPI
 * PostgreSQL
 * Liquibase 
