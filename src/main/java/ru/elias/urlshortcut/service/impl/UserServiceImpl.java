@@ -15,8 +15,9 @@ import ru.elias.urlshortcut.repository.UserRepository;
 import ru.elias.urlshortcut.service.UserService;
 import ru.elias.urlshortcut.util.EncodeUtil;
 
-@RequiredArgsConstructor
 @Service
+@RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
